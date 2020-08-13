@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name:  eda-assignment-1
+  labels:
+    name:  eda-assignment-1
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name:  eda-assignment-1
+    spec:
+      containers:
+      - image:  us.gcr.io/$PROJECT_ID/eda-assignment-1:latest
+        name:  eda-assignment-1
+        ports:
+        - containerPort:  5000
+          name:  eda-assignment-1
+      imagePullPolicy: Always

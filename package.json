@@ -1,0 +1,16 @@
+{
+  "name": "assignment-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Aaryamann Challani",
+  "license": "MIT",
+  "scripts": {
+    "start":"yarn start"
+  },
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-cors": "^0.0.16",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^9.1.0"
+  }
+}
